@@ -9,13 +9,11 @@ const fromEuroToDollar = function (eurosValue) {
 };
 
 const fromDollarToYen = function (dollarsValue) {
-    const result = (dollarsValue / oneEuroIs["USD"]) * oneEuroIs["JPY"];
-    return Number(result.toFixed(2));
+    return (dollarsValue / oneEuroIs["USD"]) * oneEuroIs["JPY"];
 };
 
 const fromYenToPound = function (yenValue) {
-    const result = (yenValue / oneEuroIs["JPY"]) * oneEuroIs["GBP"];
-    return Number(result.toFixed(3));
-};
+    return (yenValue / oneEuroIs["JPY"]) * oneEuroIs["GBP"];
+}
 
 module.exports = {fromEuroToDollar, fromDollarToYen,fromYenToPound};
